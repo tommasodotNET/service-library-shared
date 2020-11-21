@@ -26,5 +26,5 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
           PROJECT_FILE_PATH: src/ServiceLibrary.Model/ServiceLibrary.Model.csproj
-          VERSION_STATIC: 1.0.0
+          VERSION_STATIC: 1.0.1
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
