@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build ./src --configuration Release --no-restore
 
-    - name: Publish WebAppServiceLibrary
+    - name: Publish ServiceLibrary.Model
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
           PROJECT_FILE_PATH: src/ServiceLibrary.Model/ServiceLibrary.Model.csproj
