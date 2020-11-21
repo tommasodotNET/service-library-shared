@@ -12,7 +12,7 @@ namespace ServiceLibrary.Model.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        internal static IServiceCollection ConfigureOptions(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigureOptions(this IServiceCollection services, IConfiguration configuration)
         {
             List<Type> optionTypes = ReflectionExtensions.GetTypesWithHelpAttribute(typeof(OptionAttribute));
 
@@ -38,7 +38,7 @@ namespace ServiceLibrary.Model.Extensions
             return services;
         }
 
-        internal static IServiceCollection AddServicesWithReflection(this IServiceCollection services)
+        public static IServiceCollection AddServicesWithReflection(this IServiceCollection services)
         {
             List<Type> serviceTypes = ReflectionExtensions.GetTypesWithHelpAttribute(typeof(ServiceAttribute));
 
@@ -65,7 +65,7 @@ namespace ServiceLibrary.Model.Extensions
             return services;
         }
 
-        internal static IServiceCollection AddDbContextWithReflection(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddDbContextWithReflection(this IServiceCollection services, IConfiguration configuration)
         {
             List<Type> databaseTypes = ReflectionExtensions.GetTypesWithHelpAttribute(typeof(DatabaseAttribute));
 
